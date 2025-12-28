@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VATSAL | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 60px;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+nav h2 {
+  color: #00eaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+}
+
+/* HOME */
+#home {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+              url("bg.jpg") center/cover no-repeat;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 70px;
+  color: #00eaff;
+  letter-spacing: 3px;
+}
+
+.home-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #00eaff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px #00eaff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00eaff;
+}
+
+/* ABOUT */
+#about {
+  background: #0b0f1a;
+}
+
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00eaff;
+}
+
+#about p {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PROJECTS */
+#projects {
+  background: #05080f;
+  flex-direction: column;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.project-card {
+  background: #0e1628;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 0 15px rgba(0,234,255,0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px #00eaff;
+}
+
+.project-card h3 {
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+#contact {
+  background: #0b0f1a;
+}
+
+.contact-box {
+  font-size: 20px;
+}
+
+.contact-box a {
+  color: #00eaff;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+  .home-content h1 {
+    font-size: 50px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>VATSAL</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-content">
+    <h1>VATSAL</h1>
+    <p>Data Science • Cyber Security • Technology Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div>
+    <h2>About Me</h2>
+    <p>
+      I am Vatsal, a passionate technology enthusiast focused on Data Science,
+      Cyber Security, and modern digital solutions. I love creating secure,
+      scalable, and visually powerful applications. My goal is to combine
+      analytics, security, and creativity to solve real-world problems.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 style="color:#00eaff;">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Cyber Security Dashboard</h3>
+      <p>Real-time monitoring system with threat detection.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Data Analytics Platform</h3>
+      <p>Interactive data visualization and insights dashboard.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>AI Chat Application</h3>
+      <p>Smart chatbot with NLP and AI integration.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Secure Login System</h3>
+      <p>Authentication system with encryption & validation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-box">
+    <h2 style="color:#00eaff;">Contact Me</h2>
+    <p>Email: <a href="mailto:vatsal@email.com">vatsal@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/vatsal</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/vatsal</a></p>
+  </div>
+</section>
+
+</body>
+</html>
